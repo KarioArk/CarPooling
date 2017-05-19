@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Class-Path: jsr311-api-1.1.1.jar
+

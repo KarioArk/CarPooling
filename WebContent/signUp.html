@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.min.js"></script>
+<title>SignUp</title>
+</head>
+<body ng-app="TestController" ng-controller="myCtrl">
+	<!-- <div>
+		<p>Result from RESTful service is: {{User.firstName}}
+			{{User.lastName}}</p>
+	</div> -->
+	<!-- <div id="ng-app" ng-app="carPooling">
+			<div ui-view> </div>
+	</div> -->
+
+	<div align="center">
+		<h1>Sign Up</h1>
+		<!-- <form name="userForm" ng-controller="myCtrl"> -->
+		<form name="register" ng-submit="SendData()">
+
+			<label>
+				CDSID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="text" ng-model="user.cdsid" name="cdsid"
+				placeholder="KDARUNN">
+			</label><br /> <br /> <label> Mobile Number:&nbsp;&nbsp;&nbsp; <input
+				type="text" ng-model="user.mobileNumber" name="mobileNumber"
+				placeholder="9123789456">
+			</label><br /> <br /> <label> Gender:&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+				type="text" ng-model="user.gender" name="gender" placeholder="Male">
+			</label><br /> <br />
+			<!-- <label>
+			<input type="radio" name="car" ng-model="user.car" value="Add a car" />
+			Add a Car
+			<input type="radio" name="car" ng-model="user.noCar" value="I Don't have a car" ng-value="true"/>
+			I don't have a car
+			</label><br/><br/> -->
+			<input type="submit" value="GET STARTED" />
+			</td> <br /> {{ PostDataResponse }}
+		</form>
+		<br /> <br />
+		<input type="button" onclick="location.href='offerRide.html';" value="Offer a ride" />
+		&nbsp;&nbsp;&nbsp;<button ng-click="getRoutes()">Get Routes</button>  
+		<div>
+			<p ng-repeat="user in User">Result from RESTful service is: {{user.cdsid}}
+				{{user.mobileNumber}} {{user.gender}}</p>
+		</div>
+	</div>
+
+	<script src="js/app.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/controllers.js"></script>
+</body>
+</html>
